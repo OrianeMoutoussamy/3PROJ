@@ -1,0 +1,6 @@
+[submodule "3PROJ-Back"]
+	path = 3PROJ-Back
+	url = git@github.com:OrianeMoutoussamy/3PROJ-Back.git
+[submodule "3PROJ-Front"]
+	path = 3PROJ-Front
+	url = git@github.com:OrianeMoutoussamy/3PROJ-Front.git
