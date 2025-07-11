@@ -1,5 +1,9 @@
 services:
   postgres:
+    profiles:
+      - all
+      - pg
+      - storage
     image: postgres:16-alpine
     networks:
       shared_net:
@@ -20,6 +24,10 @@ services:
       retries: 5
 
   minio:
+    profiles:
+      - all
+      - minio
+      - storage
     container_name: minio
     ports:
       - "9000:9000"
@@ -35,6 +43,9 @@ services:
     command: server /data --console-address ":9001"
 
   back:
+    profiles:
+      - all
+      - dev
     build:
       context: ./3PROJ-Back
       dockerfile: Dockerfile
