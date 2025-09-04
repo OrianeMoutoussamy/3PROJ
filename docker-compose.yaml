@@ -24,6 +24,7 @@ services:
       retries: 5
 
   minio:
+    image: quay.io/minio/minio:RELEASE.2023-07-07T07-13-57Z
     profiles:
       - all
       - minio
