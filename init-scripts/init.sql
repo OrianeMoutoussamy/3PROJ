@@ -72,6 +72,7 @@ create table video
             references channel,
     title       varchar(64)                         not null,
     description varchar(256)                        not null,
+    thumbnail   bytea,
     duration    double precision,
     is_public   boolean,
     created_at  timestamp default CURRENT_TIMESTAMP not null,
